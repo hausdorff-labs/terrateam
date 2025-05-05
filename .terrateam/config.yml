@@ -3,8 +3,8 @@ apply_requirements:
   create_pending_apply_check: true
   checks:
     - tag_query: ''
-      #apply_after_merge:
-      #  enabled: false
+      apply_after_merge:
+        enabled: true
       merge_conflicts:
         enabled: true
 hooks:
@@ -17,7 +17,7 @@ hooks:
 parallel_runs: 3
 version: "1"
 when_modified:
-  file_patterns: ["**/*.tf", "**/*.tfvars", ".terrateam/config.yml"]
+  file_patterns: ["**/*.tf", "**/*.tfvars"]
   autoplan: true
   autoplan_draft_pr: true
   autoapply: false
