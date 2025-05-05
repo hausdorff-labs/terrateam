@@ -4,7 +4,7 @@ apply_requirements:
   checks:
     - tag_query: ''
       apply_after_merge:
-        enabled: false
+        enabled: true
       merge_conflicts:
         enabled: true
 hooks:
