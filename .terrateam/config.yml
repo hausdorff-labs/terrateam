@@ -1,24 +1,6 @@
-apply_requirements:
-  create_completed_apply_check_on_noop: false
-  create_pending_apply_check: true
-  checks:
-    - tag_query: ''
-      apply_after_merge:
-        enabled: false
-      merge_conflicts:
-        enabled: true
-hooks:
-  plan:
-    pre: []
-    post: []
-  apply:
-    pre: []
-    post: []
-parallel_runs: 3
-version: "1"
-when_modified:
-  file_patterns: ["**/*.tf", "**/*.tfvars"]
-  autoplan: true
-  autoplan_draft_pr: true
-  autoapply: false
-workflows:
+automerge:
+  enabled: true
+  delete_branch: true 
+
+engine:
+  name: tofu
