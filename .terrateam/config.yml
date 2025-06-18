@@ -1,2 +1,8 @@
+access_control:
+  enabled: true
+  policies:
+  - apply:
+    - repo:triage
+    tag_query: ''
 engine:
   name: tofu
