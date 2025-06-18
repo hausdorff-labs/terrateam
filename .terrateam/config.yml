@@ -1,8 +1,17 @@
 access_control:
+  apply_require_all_dirspace_access: false
   enabled: true
   policies:
-  - plan:
-    - repo:read
+  - apply: []
+    plan:
+    - '*'
+    tag_query: dir:tf2
+  - apply:
+    - '*'
+    plan:
+    - '*'
     tag_query: ''
 engine:
   name: tofu
+when_modified:
+  autoplan: false
