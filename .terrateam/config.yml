@@ -1,9 +1,17 @@
-automerge:
+access_control:
+  apply_require_all_dirspace_access: false
   enabled: true
-  delete_branch: true 
-
-apply_requirements:
-  create_completed_apply_check_on_noop: true
-
+  policies:
+  - apply: []
+    plan:
+    - '*'
+    tag_query: dir:tf2
+  - apply:
+    - '*'
+    plan:
+    - '*'
+    tag_query: ''
 engine:
   name: tofu
+when_modified:
+  autoplan: false
