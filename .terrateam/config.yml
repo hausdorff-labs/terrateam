@@ -1,3 +1,7 @@
+when_modified:
+  autoapply: false
+  autoplan: false
+
 notifications:
   policies:
     - tag_query: 'dir:tf1'
