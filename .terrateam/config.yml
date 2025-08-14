@@ -1,9 +1,14 @@
-automerge:
-  enabled: true
-  delete_branch: true 
+when_modified:
+  autoapply: false
+  autoplan: false
 
-apply_requirements:
-  create_completed_apply_check_on_noop: true
+notifications:
+  policies:
+    - tag_query: 'dir:tf1'
+      comment_strategy: 'minimize'
+
+    - tag_query: 'dir:tf2'
+      comment_strategy: 'minimize'
 
 engine:
   name: tofu
