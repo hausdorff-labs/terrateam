@@ -4,7 +4,7 @@ when_modified:
 
 notifications:
   policies:
-    - tag_query: 'dir:tf1'
+    - tag_query: 'dir:tf4'
       comment_strategy: 'minimize'
 
 engine:
