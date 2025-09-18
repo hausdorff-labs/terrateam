@@ -2,13 +2,36 @@ when_modified:
   autoapply: false
   autoplan: false
 
+# To make as many summaries as possible
+batch_runs:
+  enabled: true
+  max_workspaces_per_batch: 1
+
 notifications:
   policies:
     - tag_query: 'dir:tf1'
-      comment_strategy: 'minimize'
+      comment_strategy: 'delete'
 
     - tag_query: 'dir:tf2'
-      comment_strategy: 'minimize'
+      comment_strategy: 'delete'
+
+    - tag_query: 'dir:tf3'
+      comment_strategy: 'delete'
+
+    - tag_query: 'dir:tf4'
+      comment_strategy: 'delete'
+
+    - tag_query: 'dir:tf5'
+      comment_strategy: 'delete'
+
+    - tag_query: 'dir:tf6'
+      comment_strategy: 'delete'
+
+    - tag_query: 'dir:tf7'
+      comment_strategy: 'delete'
+
+  summary:
+    enabled: true
 
 engine:
   name: tofu
