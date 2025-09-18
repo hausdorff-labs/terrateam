@@ -31,7 +31,7 @@ notifications:
       comment_strategy: 'delete'
 
   summary:
-    enabled: true
+    enable: true
 
 engine:
   name: tofu
