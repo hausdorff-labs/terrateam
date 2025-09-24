@@ -3,9 +3,9 @@ when_modified:
   autoplan: false
 
 # To make as many summaries as possible
-# batch_runs:
-#   enabled: true
-#   max_workspaces_per_batch: 1
+batch_runs:
+  enabled: true
+  max_workspaces_per_batch: 1
 
 notifications:
   policies:
