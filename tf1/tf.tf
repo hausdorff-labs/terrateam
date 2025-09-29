@@ -6,3 +6,6 @@ resource "null_resource" "bar1" {
 
 resource "null_resource" "foobar1" {
 }
+
+resource "null_resource" "foobar11" {
+}
