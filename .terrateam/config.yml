@@ -1,6 +1,10 @@
 engine:
   name: tofu
 
+dirs:
+  tf1:
+    create_if_missing: true
+
 tree_builder:
   enabled: true
   script: |
