@@ -1,0 +1,7 @@
+#! /usr/bin/env python3
+
+import json
+
+files = [ { "path": "./tf1/tf.tf", "id": "tf1" } ]
+
+print(json.dumps(files))
