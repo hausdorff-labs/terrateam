@@ -21,6 +21,10 @@ workflows:
       - type: plan
     apply:
       - type: run
-        cmd: ['touch', 'main.tf']
+        cmd: |
+          tee -a main.tf <<EOF
+            resource "null_resource" "foo" {
+            }
+          EOF
       - type: init
       - type: apply
