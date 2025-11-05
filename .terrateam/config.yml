@@ -16,15 +16,6 @@ workflows:
   - tag_query: "dir:tf1"
     plan:
       - type: run
-        cmd: ['touch', 'main.tf']
+        cmd: ['touch', 'tf.tf']
       - type: init
       - type: plan
-    apply:
-      - type: run
-        cmd: |
-          tee -a main.tf <<EOF
-            resource "null_resource" "foo" {
-            }
-          EOF
-      - type: init
-      - type: apply
