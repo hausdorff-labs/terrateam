@@ -3,6 +3,7 @@ engine:
 
 dirs:
   tf1:
+    create_and_select_workspace: true
     create_if_missing: true
 
 tree_builder:
@@ -11,3 +12,15 @@ tree_builder:
     #! /usr/bin/env bash
     $TERRATEAM_ROOT/bin/tree-builder
 
+workflows:
+  - tag_query: "dir:tf1"
+    plan:
+      - type: run
+        cmd: ['touch', 'main.tf']
+      - type: init
+      - type: plan
+    apply:
+      - type: run
+        cmd: ['touch', 'main.tf']
+      - type: init
+      - type: apply
