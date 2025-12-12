@@ -1,6 +1,6 @@
 when_modified:
   autoapply: false
-  autoplan: false
+  autoplan: true
 
 notifications:
   policies:
@@ -8,9 +8,6 @@ notifications:
       comment_strategy: 'minimize'
 
     - tag_query: 'dir:tf2'
-      comment_strategy: 'minimize'
-
-    - tag_query: 'dir:tf3'
       comment_strategy: 'minimize'
 
 engine:
